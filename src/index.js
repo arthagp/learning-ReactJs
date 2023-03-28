@@ -101,8 +101,9 @@ function News() {
       {/* <Card {...someNews[0]} />
     <Card {...someNews[1]} />
     <Card {...someNews[2]} /> */}
+    {/* pada saat merender element list gunakan key agar unik, ini untuk pengaruh performa pada project react */}
       {someNews.map((news) => (
-        <Card {...news} />
+        <Card {...news} key={news.title} />
       ))}
     </div>
   );
